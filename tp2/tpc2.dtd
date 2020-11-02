@@ -1,20 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!ELEMENT pr (metadata, abstract, deliverables)>
-<!ELEMENT metadata (title, sudotitle, begindate, enddate, supervisor, workteam)>
+<!ELEMENT pr (metadata, workteam, abstract, deliverables)>
+
+<!ELEMENT metadata (key, title, sudotitle?, begindate, enddate, supervisor)>
+<!ELEMENT key (#PCDATA)>
 <!ELEMENT title (#PCDATA)>
 <!ELEMENT sudotitle (#PCDATA)>
 <!ELEMENT begindate (#PCDATA)>
 <!ELEMENT enddate (#PCDATA)>
 <!ELEMENT supervisor (#PCDATA)>
-<!ELEMENT workteam (submitter)>
+<!ATTLIST supervisor
+  href CDATA  #IMPLIED
+>
+
+<!ELEMENT workteam (submitter)+>
 <!ELEMENT submitter (nome, email)>
+<!ATTLIST submitter
+  num ID #REQUIRED  
+>
 <!ELEMENT nome (#PCDATA)>
 <!ELEMENT email (#PCDATA)>
-<!ELEMENT abstract (#PCDATA|i|b|a)*>
-<!ELEMENT  i (#PCDATA)* >
-<!ELEMENT  b (#PCDATA)* >
-<!ELEMENT  a (#PCDATA)* >
+
+<!ELEMENT abstract (p)+>
+<!ELEMENT p (#PCDATA|i|b|u|a)*>
+<!ELEMENT i (#PCDATA|b|u|a)*>
+<!ELEMENT b (#PCDATA|i|u|a)*>
+<!ELEMENT u (#PCDATA|i|b|a)*>
+<!ELEMENT a (#PCDATA)*>
 <!ATTLIST a
 	href CDATA #REQUIRED	
 >
+
 <!ELEMENT deliverables (a)+>
