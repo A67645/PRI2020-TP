@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<pr>
+  <metadata>
+    <title>(req)</title>
+    <sudotitle>(opt)</sudotitle>
+    <begindate>(req)</begindate>
+    <enddate>(req)</enddate>
+    <supervisor>(req)</supervisor>
+    <workteam>
+      <submitter>
+        <name>(req)</name>
+        <email>(opt)</email>
+      </submitter>
+      <submitter>
+        <name>(req)</name>
+        <email>(opt)</email>
+      </submitter>
+      <submitter>
+        <name>(req)</name>
+        <email>(opt)</email>
+      </submitter>
+    </workteam>
+  </metadata>
+  <abstact>
+    paragrafos (texto, bold, italico, links internos, link externos)
+  </abstact>
+  <deliverables>
+    <filelink>filename</filelink>
+    <filelink>filename</filelink>
+    <filelink>filename</filelink>
+  </deliverables>
+</pr>
