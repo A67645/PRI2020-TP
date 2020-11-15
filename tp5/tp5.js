@@ -83,7 +83,7 @@ http.createServer(function (req, res) {
         }
         else if (req.url.match (/alunos\/\A[0-9]+/)){
             var aluno = req.url.split("/")[2]
-            axios.get(`http://localhost:3000/alunos/`+aluno)
+            axios.get(`http://localhost:3000/alunos/` + aluno)
             .then(function (resp) {
                 a = resp.data;
                 res.writeHead(200, {'Content-Type': 'text/html;charset=utf-8'})
@@ -108,7 +108,7 @@ http.createServer(function (req, res) {
     }
     else if (req.url.match (/cursos\/\C[A-Z][0-9]+/)){
         var curso = req.url.split("/")[2]
-        axios.get(`http://localhost:3000/cursos/`+curso)
+        axios.get(`http://localhost:3000/cursos/` + curso)
         .then(function (resp) {
             a = resp.data;
             res.writeHead(200, {'Content-Type': 'text/html;charset=utf-8'})
@@ -129,8 +129,8 @@ http.createServer(function (req, res) {
     }); 
 }
 else if ((req.url.match (/instrumentos\/I[0-9]+/) )|| (req.url.match(/instrumentos\/X[0-9]+/))){
-    var instrumento = req.url.split("/")[2]
-    axios.get(`http://localhost:3000/instrumentos/`+instrumento)
+            var instrumento = req.url.split("/")[2]
+            axios.get(`http://localhost:3000/instrumentos/` + instrumento)
     .then(function (resp) {
         a = resp.data;
         res.writeHead(200, {'Content-Type': 'text/html;charset=utf-8'})
