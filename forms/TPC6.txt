@@ -1,0 +1,19 @@
+TPC 6:
+
+	Fazer uma Single Page Application: ToDoList
+						 
+						 ____________________________________________
+						| Nova Tarefa:                               |
+				        |      descrição: "TXT"                      |
+						|      responsável: "SELECT da BD"           |
+						|      data limite: "TXT"                    |
+						|                              REGISTO       |
+						|____________________________________________|
+						| Lista Tarefas Pendentes                    |
+						|    Data Limite (arc) Responsável Descrição |
+						|        sort1            sort2              |
+						|     ......          .....     .....    V X |
+						|____________________________________________|
+						Resolvidas/Canceladas
+
+						com uma base de dados em json de tarefas
