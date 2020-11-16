@@ -164,7 +164,9 @@ var galunoServer = http.createServer(function (req, res) {
             }
             // GET /alunos/registo --------------------------------------------------------------------
             else if(req.url == "/alunos/registo"){
-                // Add code to render page with the student form
+                res.writeHead(200, {'Content-Type': 'text/css;charset=utf-8'})
+                        res.write(geraFormAluno(d))
+                        res.end()
             }
             // GET /w3.css ------------------------------------------------------------------------
             else if(/w3.css$/.test(req.url)){
@@ -183,12 +185,19 @@ var galunoServer = http.createServer(function (req, res) {
             }
             break
         case "POST":
-            res.writeHead(200, {'Content-Type': 'text/html;charset=utf-8'})
-            // Replace this code with a POST request to the API server
-            res.write('<p>Recebi um POST dum aluno</p>')
-            res.write('<p><a href="/">Voltar</a></p>')
-            res.end()
-            break
+            if(req.url == '/alunos'){
+                res.writeHead(200, {'Content-Type': 'text/html;charset=utf-8'})
+                // Replace this code with a POST request to the API server
+                res.write('<p>Recebi um POST dum aluno</p>')
+                res.write('<p><a href="/">Voltar</a></p>')
+                res.end()
+                break
+            }
+            else{
+                res.writeHead(200, {'Content-Type': 'text/html;charset=utf-8'})
+                res.write("<p> POST" + req.url + " não suportado neste serviço.</p>")
+                res.end()
+            }
         default: 
             res.writeHead(200, {'Content-Type': 'text/html;charset=utf-8'})
             res.write("<p>" + req.method + " não suportado neste serviço.</p>")
