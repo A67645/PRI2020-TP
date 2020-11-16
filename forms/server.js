@@ -30,7 +30,9 @@ function geraPagAlunos( alunos, d){
         </head>
         <body>
             <div class="w3-container w3-teal">
-                <h2>Lista de Alunos</h2>
+                <h2>
+					Lista de Alunos
+				</h2>
             </div>
             <table class="w3-table w3-bordered">
                 <tr>
