@@ -26,20 +26,22 @@ function geraPagAlunos( alunos, d){
   `
 
   lsit.foreach(a => {
-                  
-  /* ----------------------------------------------------
-     To be replaced with code to generate the table rows
-     ---------------------------------------------------- */
-
-  pagHTML += `
-        </table>
-        <div class="w3-container w3-teal">
-            <address>Gerado por galuno::PRI2020 em ${d} --------------</address>
-        </div>
-    </body>
-    </html>
-  `
-})
+    pagHTML += `
+                   <tr>
+                        <td><a href="/alunos/${a.id}">${a.nome}</a><td>
+                        <td>${a.id}</td>
+                        <td>${a.curso}</td>
+                   </tr>
+                `
+});
+    pagHTML += `
+          </table>
+          <div class="w3-container w3-teal">
+             <address>Gerado por galuno::PRI2020 em ${d} --------------</address>
+          </div>
+      </body>
+     </html>
+    `
   return pagHTML
 }
 
@@ -135,7 +137,7 @@ var galunoServer = http.createServer(function (req, res) {
 
                         // Add code to render page with the student's list
                         res.writeHead(200, {'Content-Type': 'text/html;charset=utf-8'})
-                        res.write(geraPagAlunos(alunos, d)
+                        res.write(geraPagAlunos(alunos, d))
                         res.end()
                     })
                     .catch(function(erro){
@@ -150,8 +152,14 @@ var galunoServer = http.createServer(function (req, res) {
                 axios.get("http://localhost:3000/alunos/" + idAluno)
                     .then( response => {
                         let a = response.data
-                        
-                        // Add code to render page with the student record
+                        res.writeHead(200, {'Content-Type': 'text/css;charset=utf-8'})
+                        res.write(geraPagAluno(a, d))
+                        res.end()
+                    })
+                    .catch(function(erro){
+                        res.writeHead(200, {'Content-Type': 'text/html;charset=utf-8'})
+                        res.write("<p>Não foi possível obter o aluno...")
+                        res.end()
                     })
             }
             // GET /alunos/registo --------------------------------------------------------------------
@@ -159,7 +167,7 @@ var galunoServer = http.createServer(function (req, res) {
                 // Add code to render page with the student form
             }
             // GET /w3.css ------------------------------------------------------------------------
-            else if(req.url == "/w3.css"){
+            else if(/w3.css$/.test(req.url)){
                 fs.readFile("w3.css", function(erro, dados){
                     if(!erro){
                         res.writeHead(200, {'Content-Type': 'text/css;charset=utf-8'})
