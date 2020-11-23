@@ -78,7 +78,7 @@ function geraPagina(type) {
             });
 
         case "resolvidas":
-            tarefas.forEach(tp => {
+            resolvidas.forEach(tp => {
                 pagHtml += `   
                     <p> id Tarefa : ${tp.id} </p> 
                     <p> Descrição : ${tp.descricao} </p>
