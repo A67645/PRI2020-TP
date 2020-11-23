@@ -1,0 +1,62 @@
+{
+  "pendentes": [
+    {
+      "id": "1",
+      "descricao": "dar de comer ao gato",
+      "responsavel": "eu",
+      "data_limite": "hoje "
+    },
+    {
+      "id": "2",
+      "descricao": "fazer o jantar",
+      "responsavel": " mae",
+      "data_limite": "hoje "
+    },
+    {
+      "id": "3",
+      "descricao": "fazer o almoco",
+      "responsavel": " mae",
+      "data_limite": "hoje "
+    }
+  ],
+  "resolvidas": [
+    {
+      "id": "4",
+      "descricao": "arrumar o quarto",
+      "responsavel": "irmao",
+      "data_limite": "hoje "
+    },
+    {
+      "id": "5",
+      "descricao": "passear o cao",
+      "responsavel": "eu",
+      "data_limite": "hoje "
+    },
+    {
+      "id": "6",
+      "descricao": "ir as compras",
+      "responsavel": "eu",
+      "data_limite": "hoje "
+    }
+  ],
+  "canceladas": [
+    {
+      "id": "7",
+      "descricao": "jantar fora",
+      "responsavel": "familia",
+      "data_limite": "amanha "
+    },
+    {
+      "id": "8",
+      "descricao": "fazer exercicio",
+      "responsavel": "pai",
+      "data_limite": "amanha "
+    },
+    {
+      "id": "9",
+      "descricao": "aspirar o quarto",
+      "responsavel": "eu",
+      "data_limite": "hoje "
+    }
+  ]
+}
