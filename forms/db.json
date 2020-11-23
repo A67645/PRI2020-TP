@@ -1,0 +1,11 @@
+{
+	"alunos":[
+				"aluno":{
+							"nome":"António Sérgio da Costa Gomes",
+							"id":"A67645",
+							"curso":"MIEI",
+							"git":"https://github.com/A67645/PRI2020-TP.git"
+						}
+			]
+}
+
