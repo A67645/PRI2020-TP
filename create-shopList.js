@@ -25,22 +25,22 @@ var shopListModel = mongoose.model('list', shopListSchemaSchema)
 var data = [
     {
       "Product": "Bananas",
-      "Quantity": "6",
+      "Quantity": 6,
       "Category": "Fruit"
     },
      {
         "Product": "Sugar",
-        "Quantity": "2",
+        "Quantity": 2,
         "Category": "Groceries"
     },
     {
         "Product": "Apples",
-        "Quantity": "10",
+        "Quantity": 10,
         "Category": "Fruit"
     },
     {
         "Product": "Carrots",
-        "Quantity": "8",
+        "Quantity": 8,
         "Category": "Begetables"
     }
   ]

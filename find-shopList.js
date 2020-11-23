@@ -29,6 +29,6 @@ shopListModel
             console.log('Error retrieving student records: ' + err)
         }
         else {
-            console.log(docs)
+            docs.forEach(d => { console.log(d.category + " - " + d.product + " - " + d.quantity)})
         }
     })
